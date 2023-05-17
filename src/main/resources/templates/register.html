@@ -17,27 +17,33 @@
             <div class="col-md-6 offset-md-3">
                 <div class="card">
                     <div class="card-header text-center fs-4"> Register</div>
+
+                    <!--<th:block th:if="${session.msg}">
+                        <p class="text-center fs-4 text-success">[[${session.msg}]]</p>
+                        <th:block th:text="${#session.removeAttribute('msg')}"> </th:block>
+                    </th:block>-->
+
                     <div class="card-body">
-                        <form>
+                        <form action="createUser" method="post">
                             <div class="mb-3">
                                 <label> Enter full name</label>
-                                <input class="form-control" id="fullName" type="text">
+                                <input class="form-control" id="fullName" name="fullName" type="text">
                             </div>
                             <div class="mb-3">
                                 <label> Enter email</label>
-                                <input class="form-control" id="email" type="email">
+                                <input class="form-control" id="email" name="email" type="email">
                             </div>
                             <div class="mb-3">
                                 <label> Enter address</label>
-                                <input class="form-control" id="address" type="text">
+                                <input class="form-control" id="address" name="address" type="text">
                             </div>
                             <div class="mb-3">
                                 <label> Enter qualification</label>
-                                <input class="form-control" id="qualification" type="text">
+                                <input class="form-control" id="qualification" name="qualification" type="text">
                             </div>
                             <div class="mb-3">
                                 <label> Enter password</label>
-                                <input class="form-control" id="password" type="password">
+                                <input class="form-control" id="password" name="password" type="password">
                             </div>
                             <button class="btn btn-primary col-md-12">register</button>
                         </form>
